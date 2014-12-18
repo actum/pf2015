@@ -14,6 +14,8 @@ app.init = function() {
             el: 'greeting',
             depthMapper: new MagicEye.TextDepthMapper(text)
         });
+
+        magicEye.regeneratePalette();
     };
 
     if (location.hash) {
