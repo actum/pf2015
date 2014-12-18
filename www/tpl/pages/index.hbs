@@ -1,8 +1,9 @@
 ---
-title: Greeting | Actum
+title: PF 2015 | Actum
+description: Actum wishes you a merry christmas!
 ---
 <h1>
-    <img src="http://www.actum.cz/~/media/Images/HomePage/Header/Actum-square_menší.ashx?h=71&amp;w=153" alt="logo cz" width="153" height="71">
+    <a href="http://www.actum.cz/" title="Actum website"><img src="http://www.actum.cz/~/media/Images/HomePage/Header/Actum-square_menší.ashx?h=71&amp;w=153" alt="logo cz" width="153" height="71"></a>
     <span>wishes you a merry christmas!</span>
 </h1>
 
@@ -10,7 +11,7 @@ title: Greeting | Actum
 <canvas id="paint" width="800" height="500"></canvas>
 
 <p>
-    <button type="button" id="create">Create your own Magic Eye PF</button>
+    <button type="button" id="create">Create your own PF</button>
 </p>
 <div id="create-box" class="hidden">
     <p>
@@ -21,7 +22,7 @@ title: Greeting | Actum
 </div>
 <div id="share-box" class="hidden">
     <p>
-        <label for="share-link">Share this link</label>
+        <label for="share-link">Share:</label>
         <input type="text" id="share-link" onClick="this.select();">
     </p>
 </div>
@@ -30,3 +31,7 @@ title: Greeting | Actum
     <a href="http://en.wikipedia.org/wiki/Autostereogram" target="_blank">What is it?</a>
     <a href="http://www.hidden-3d.com/how_to_view_stereogram.php" target="_blank">How to use it?</a>
 </div>
+
+<p class="footer">
+    Stereogram generated using <a href="http://peeinears.github.io/MagicEye.js/" target="_blank">MagicEye.js</a>.
+</p>

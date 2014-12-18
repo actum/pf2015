@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head prefix="og: http://ogp.me/ns#">
         <meta charset="utf-8">
         <title>{{title}}</title>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{title}}">
+        <meta property="og:description" content="{{description}}">
+
         {{#if environment.devel}}
             <link rel="stylesheet" href="css/style.css">
         {{else}}
