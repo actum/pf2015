@@ -36,6 +36,7 @@ app.init = function() {
     }
 
     $('#create').click(function() {
+        $(this).hide();
         $('#create-box').show();
     });
 

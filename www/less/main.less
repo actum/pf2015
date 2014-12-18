@@ -1,5 +1,30 @@
+@red: #ff3d28;
+@gray: #808080;
+
 body {
+    background: white;
+    min-width: 1200px;
+    margin: 0;
+    padding: .5em 0 2em;
+    font-family: arial, helvetica, sans-serif;
     text-align: center;
+    color: @gray;
+}
+
+body, input, button {
+    font-size: 100%;
+}
+
+h1 {
+    margin: 0 0 .75em;
+    text-align: center;
+    color: @gray;
+    line-height: 1;
+
+    span {
+        display: block;
+        margin-top: -5px;
+    }
 }
 
 img {
@@ -13,4 +38,26 @@ canvas {
 
 .hidden {
     display: none;
+}
+
+button {
+    background: @red;
+    border: none;
+    padding: .5em 1em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background: darken(@red, 15%);
+    }
+}
+
+input[type="text"] {
+    padding: .25em .5em;
+}
+
+#share-link {
+    width: 400px;
 }
