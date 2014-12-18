@@ -13,6 +13,7 @@
         {{> body }}
 
         {{#if environment.devel}}
+            <script src="bower/jquery/dist/jquery.js"></script>
             <script src="bower/magic-eye/magiceye.js"></script>
             <script src="bower/magic-eye/depthmappers/TextDepthMapper.js"></script>
             <script src="bower/magic-eye/depthmappers/TemplateDepthMapper.js"></script>
@@ -20,6 +21,7 @@
             <script src="bower/magic-eye/depthmappers/CanvasDepthMapper.js"></script>
             <script src="js/app-compiled.js"></script>
         {{else}}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="js/app-compiled.min.js"></script>
         {{/if}}
         <script>

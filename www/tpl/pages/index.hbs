@@ -3,5 +3,18 @@ title: Greeting | Actum
 ---
 
 <h1>We wish you a merry christmas <br>and</h1>
+<p>
+    <button type="button" id="create">Create my own Magic Eye PF</button>
+</p>
+<div id="create-box" class="hidden">
+    <p>
+        Write your PF message <input type="text" placeholder="PF 2015" id="text"> <button type="button" id="share">Preview my PF</button>
+    </p>
+</div>
+<div id="share-box" class="hidden">
+    <p>
+        Share this link <input type="text" id="share-link">
+    </p>
+</div>
 <img id="greeting" width="1200" height="700">
 <canvas id="paint" width="1200" height="700"></canvas>
