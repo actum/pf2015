@@ -28,9 +28,6 @@ app.init = function() {
 
             MagicEye.render({
                 el: 'greeting',
-                // depthMapper: new MagicEye.ImgDepthMapper(img)
-                // depthMapper: new MagicEye.TextDepthMapper('ZU')
-                // depthMapper: new MagicEye.TemplateDepthMapper([[0.0, 0.0, 0.3],[0.0, 0.3, 0.6],[0.3, 0.6, 0.9]])
                 depthMapper: new MagicEye.CanvasDepthMapper(canvas)
             });
         };
