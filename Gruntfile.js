@@ -151,6 +151,19 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            dist: {
+                src: [
+                    '<%= js %>/app-compiled.min.js',
+                    '<%= bower %>/magic-eye/magiceye.min.js',
+                    '<%= bower %>/magic-eye/depthmappers/TextDepthMapper.js',
+                    '<%= bower %>/magic-eye/depthmappers/CanvasDepthMapper.js'
+                ],
+                dest: '<%= js %>/app-production.js',
+                nonull: true
+            }
+        },
+
         clean: {
             production: ['<%= dist %>'],
             build: [
@@ -290,7 +303,7 @@ module.exports = function(grunt) {
     grunt.registerTask('cssdev', ['less:dev']);
     grunt.registerTask('css', ['less:production', 'cssmin']);
     grunt.registerTask('jsdev', ['jshint:gruntfile', 'jshint:dev', 'jscs', 'browserify:dev']);
-    grunt.registerTask('js', ['jshint:gruntfile', 'jshint:production', 'jscs', 'browserify:production', 'uglify:compile']);
+    grunt.registerTask('js', ['jshint:gruntfile', 'jshint:production', 'jscs', 'browserify:production', 'uglify:compile', 'concat']);
     grunt.registerTask('tpldev', ['assemble:dev']);
     grunt.registerTask('tpl', ['assemble:production']);
     grunt.registerTask('dist', ['clean:production', 'copy:production', 'cacheBust']);

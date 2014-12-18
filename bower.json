@@ -2,7 +2,6 @@
   "name": "basic-project",
   "version": "0.0.0-ignored",
   "dependencies": {
-    "magic-eye": "https://github.com/peeinears/MagicEye.js.git",
-    "jquery": "~2.1.2"
+    "magic-eye": "https://github.com/peeinears/MagicEye.js.git"
   }
 }
