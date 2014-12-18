@@ -1,0 +1,21 @@
+# system files
+.DS_STORE
+
+# npm
+/node_modules/
+npm-debug.log
+
+# bower
+/www/bower/
+
+# css
+/www/css/
+
+# js
+/www/js/
+
+# html
+/www/*.html
+
+# dist
+/dist/

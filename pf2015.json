@@ -1,0 +1,26 @@
+{
+  "name": "greeting",
+  "title": "Greeting",
+  "description": "New Year greeting",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Actum",
+    "email": "actum@actum.cz",
+    "url": "http://www.actum.cz/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/actum/greeting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/actum/greeting/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": []
+}

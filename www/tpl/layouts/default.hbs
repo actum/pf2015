@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        {{#if environment.devel}}
+            <link rel="stylesheet" href="css/style.css">
+        {{else}}
+            <link rel="stylesheet" href="css/style.min.css">
+        {{/if}}
+    </head>
+    <body>
+        {{> body }}
+
+        {{#if environment.devel}}
+            <script src="bower/magic-eye/magiceye.js"></script>
+            <script src="bower/magic-eye/depthmappers/TextDepthMapper.js"></script>
+            <script src="bower/magic-eye/depthmappers/TemplateDepthMapper.js"></script>
+            <script src="bower/magic-eye/depthmappers/ImgDepthMapper.js"></script>
+            <script src="bower/magic-eye/depthmappers/CanvasDepthMapper.js"></script>
+            <script src="js/app-compiled.js"></script>
+        {{else}}
+            <script src="js/app-compiled.min.js"></script>
+        {{/if}}
+        <script>
+            var config = {};
+            app.init(config);
+        </script>
+        {{#if environment.devel}}
+            <script type='text/javascript' id="__bs_script__">//<![CDATA[
+                document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.8.0.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+            //]]></script>
+        {{/if}}
+    </body>
+</html>
