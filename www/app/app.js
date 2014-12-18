@@ -26,7 +26,12 @@ app.init = function() {
 
             MagicEye.render({
                 el: 'greeting',
-                depthMapper: new MagicEye.CanvasDepthMapper(canvas)
+                depthMapper: new MagicEye.CanvasDepthMapper(canvas),
+                colors: [
+                    [255, 61, 40, 255],
+                    [255, 255, 255, 255],
+                    [0, 150, 0, 255]
+                ]
             });
         };
         img.src = 'img/pf2015.png';
