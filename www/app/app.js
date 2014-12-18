@@ -8,11 +8,17 @@ app.init = function() {
     var context = canvas.getContext('2d');
     context.fillStyle = '#ffffff';
     context.fillRect(0, 0, canvas.width, canvas.height);
+    var colors = [
+        [255, 61, 40, 255],
+        [255, 255, 255, 255],
+        [0, 150, 0, 255]
+    ];
 
     var writeText = function(text) {
         MagicEye.render({
             el: 'greeting',
-            depthMapper: new MagicEye.TextDepthMapper(text)
+            depthMapper: new MagicEye.TextDepthMapper(text),
+            colors: colors
         });
     };
 
@@ -27,11 +33,7 @@ app.init = function() {
             MagicEye.render({
                 el: 'greeting',
                 depthMapper: new MagicEye.CanvasDepthMapper(canvas),
-                colors: [
-                    [255, 61, 40, 255],
-                    [255, 255, 255, 255],
-                    [0, 150, 0, 255]
-                ]
+                colors: colors
             });
         };
         img.src = 'img/pf2015.png';
@@ -46,11 +48,9 @@ app.init = function() {
         $('#share-box').show();
 
         var text = $('#text').val().trim();
-
         writeText(text);
 
         var link = window.btoa(text);
-
         $('#share-link').val(location.href + '#' + link);
     });
 
